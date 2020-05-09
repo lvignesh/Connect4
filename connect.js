@@ -30,7 +30,7 @@ function checkBottom(colIndex){
 	for(var row=5;row>-1;row--)
 	{
 		colorReport=returnColor(row,colIndex);
-		if(colorReport == 'rgb(128, 128, 128)')
+		if(colorReport == 'rgb(255, 240, 12)')
 		{
 			return row;
 		}
@@ -38,7 +38,7 @@ function checkBottom(colIndex){
 }
 
 function colorMatchCheck(one,two,three,four){
-	return(one == two && one==three && one==four && one!='rgb(128, 128, 128)' && one!= undefined)
+	return(one == two && one==three && one==four && one!='rgb(255, 240, 12)' && one!= undefined)
 }
 
 function horizontalWinCheck(){
@@ -108,7 +108,7 @@ var currentPlayer=1;
 var currentName =player1;
 var currentColor=player1color;
 
-$('h3').text(player1+"it is your turn,pick a column to drop in!");
+$('h3').text(player1+" it is your turn,pick a column to drop in!");
 
 
 
@@ -133,12 +133,12 @@ $('.board button').on('click',function(){
 	if(currentPlayer === 1)
 	{
 		currentName=player1;
-		$('h3').text(currentName+"It is your turn.")
+		$('h3').text(currentName+" It is your turn.")
 		currentColor=player1color;
 	}
 	else{
 		currentName = player2;
-		$('h3').text(currentName+"it is your turn.");
+		$('h3').text(currentName+" it is your turn.");
 		currentColor=player2color;
 	}
 })
